@@ -1,19 +1,39 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
+    background-color: #ffffff; /* 배경색을 하얀색으로 변경 */
 }
 
 header {
-    background-color: #007bff;
-    color: white;
+    background-color: #1E2A4A; /* 군청색으로 변경 */
+    color: #E0E0E0; /* 텍스트 색상 */
     padding: 20px;
     text-align: center;
+    position: relative;
+}
+
+header::before {
+    content: '';
+    background-image: url('images/camo-pattern.png'); /* 위장 무늬 패턴 */
+    opacity: 0.1; /* 투명도 설정 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+header h1 {
+    position: relative;
+    z-index: 1; /* 텍스트가 위에 오도록 설정 */
+    font-weight: bold; /* 굵은 폰트 */
+    font-size: 2.5em; /* 폰트 크기 조정 */
 }
 
 nav a {
-    color: white;
+    color: #E0E0E0;
     margin: 0 15px;
     text-decoration: none;
 }
@@ -28,7 +48,8 @@ nav a {
 }
 
 .card {
-    background-color: #1e1e1e; /* 기본 카드 배경 색 */
+    background-color: rgba(255, 255, 255, 0.8); /* 반투명 배경 */
+    border: 2px solid #4A5D23; /* 메탈릭한 테두리 */
     border-radius: 15px; /* 모서리 둥글게 */
     height: 480px; /* 카드의 고정 높이 */
     width: 320px; /* 카드의 고정 너비 */
@@ -37,16 +58,44 @@ nav a {
     align-items: center; /* 수평 중앙 정렬 */
     justify-content: center; /* 수직 중앙 정렬 */
     transition: transform 0.2s, box-shadow 0.2s; /* 애니메이션 효과 */
-    color: white; /* 텍스트 색상 */
+    color: #E0E0E0; /* 텍스트 색상 */
+    position: relative;
 }
 
-.card:hover {
-    transform: translateY(-5px); /* 마우스 오버 시 카드 위로 이동 */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+.card::before {
+    content: '';
+    background-image: url('images/military-map-pattern.png'); /* 전술 지도 패턴 */
+    opacity: 0.2; /* 투명도 설정 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 15px; /* 모서리 둥글게 */
+    z-index: 0; /* 배경이 텍스트 아래에 있도록 설정 */
 }
 
 .card-content {
     text-align: center; /* 텍스트 가운데 정렬 */
+    position: relative;
+    z-index: 1; /* 텍스트가 위에 오도록 설정 */
+}
+
+.card:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* 그림자 효과 */
+    animation: radar-scan 1s infinite; /* 애니메이션 효과 */
+}
+
+@keyframes radar-scan {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 /* 버튼 스타일 */
@@ -54,14 +103,17 @@ nav a {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 15px;
-    background-color: #007bff; /* 버튼 색 */
-    color: white; /* 버튼 글자색 */
+    background-color: #4A5D23; /* 카키색으로 설정 */
+    color: #E0E0E0; /* 버튼 글자색 */
     text-decoration: none; /* 링크 밑줄 제거 */
     border-radius: 5px; /* 버튼 모서리 둥글게 */
+    border: 2px solid #FFC400; /* 강조 색상으로 테두리 설정 */
+    transition: background-color 0.3s, transform 0.2s; /* 애니메이션 효과 */
 }
 
 .button:hover {
-    background-color: #0056b3; /* 마우스 오버 시 버튼 색 변화 */
+    background-color: #FFC400; /* 강조 색상으로 변경 */
+    transform: scale(1.05); /* 버튼 크기 확대 */
 }
 
 /* 반응형 디자인 */

@@ -20,16 +20,20 @@ nav a {
 
 .card-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3개의 열 */
-    gap: 20px; /* 카드 사이 간격 */
+    grid-template-columns: repeat(3, 1fr); /* 3개의 열 유지 */
+    gap: 40px; /* 카드 사이 간격 */
     padding: 20px;
+    max-width: 1200px; /* 최대 너비 설정 */
+    margin: 0 auto; /* 중앙 정렬 */
+    padding-left: 60px; /* 좌측 여백 */
+    padding-right: 60px; /* 우측 여백 */
 }
 
 .card {
     background-color: #1e1e1e; /* 기본 카드 배경 색 */
     border-radius: 15px; /* 모서리 둥글게 */
-    height: 300px; /* 카드의 고정 높이 (타로카드에 맞게 조정) */
-    width: 200px; /* 카드의 고정 폭 */
+    height: 450px; /* 카드의 고정 높이 */
+    width: 320px; /* 카드의 고정 너비 */
     display: flex; /* 카드 내용을 중앙 정렬하기 위해 */
     flex-direction: column; /* 내용 세로 정렬 */
     align-items: center; /* 수평 중앙 정렬 */
@@ -63,14 +67,20 @@ nav a {
 }
 
 /* 반응형 디자인 */
+@media (max-width: 1200px) {
+    .card-container {
+        gap: 30px; /* gap 축소 */
+    }
+}
+
 @media (max-width: 768px) {
     .card-container {
-        grid-template-columns: repeat(2, 1fr); /* 작은 화면에서는 2열 */
+        grid-template-columns: repeat(2, 1fr); /* 2x3 그리드로 변경 */
     }
 }
 
 @media (max-width: 480px) {
     .card-container {
-        grid-template-columns: 1fr; /* 더 작은 화면에서는 1열 */
+        grid-template-columns: 1fr; /* 1열 세로 배치 */
     }
 }

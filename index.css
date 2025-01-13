@@ -1,63 +1,79 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>배틀그라운드 강의</title>
-    <link rel="stylesheet" href="index.css"> <!-- index 전용 스타일 시트 링크 -->
-</head>
-<body>
-    <header>
-        <h1>배틀그라운드 강의</h1>
-        <nav>
-            <a href="index.html">홈</a>
-            <a href="game-basics.html">게임 기초</a>
-        </nav>
-    </header>
-    <main>
-        <div class="top-card-container">
-            <div class="card">
-                <div class="card-content">
-                    <h3>게임 기초</h3>
-                    <a href="game-basics.html" class="button">자세히 보기</a>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-content">
-                    <h3>전투 기술</h3>
-                    <a href="combat-skills.html" class="button">자세히 보기</a>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-content">
-                    <h3>전술과 전략</h3>
-                    <a href="tactics-strategy.html" class="button">자세히 보기</a>
-                </div>
-            </div>
-        </div>
-        <div class="bottom-card-container">
-            <div class="card">
-                <div class="card-content">
-                    <h3>팀 플레이</h3>
-                    <a href="team-play.html" class="button">자세히 보기</a>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-content">
-                    <h3>심리와 멘탈</h3>
-                    <a href="mental-strategy.html" class="button">자세히 보기</a>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-content">
-                    <h3>실전 응용</h3>
-                    <a href="practical-application.html" class="button">자세히 보기</a>
-                </div>
-            </div>
-        </div>
-    </main>
-    <footer>
-        <p>&copy; 2025 배틀그라운드 강의</p>
-    </footer>
-</body>
-</html>
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* 배경색을 연한 회색으로 설정 */
+}
+
+header {
+    background-color: #007bff; /* 헤더 배경색을 파란색으로 설정 */
+    color: #ffffff; /* 텍스트 색상 */
+    padding: 20px;
+    text-align: center;
+}
+
+nav a {
+    color: #ffffff; /* 링크 색상 */
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.top-card-container, .bottom-card-container {
+    display: flex; /* 수평 정렬을 위해 flexbox 사용 */
+    justify-content: space-around; /* 카드 간 동일한 간격 유지 */
+    padding: 20px; /* 패딩 추가 */
+}
+
+.card {
+    background-color: #1e1e1e; /* 카드 배경색 */
+    border-radius: 15px; /* 모서리 둥글게 */
+    height: 200px; /* 카드의 고정 높이 */
+    width: 250px; /* 카드의 고정 너비 */
+    display: flex; /* 카드 내용을 중앙 정렬하기 위해 */
+    flex-direction: column; /* 내용 세로 정렬 */
+    align-items: center; /* 수평 중앙 정렬 */
+    justify-content: center; /* 수직 중앙 정렬 */
+    transition: transform 0.2s, box-shadow 0.2s; /* 애니메이션 효과 */
+    color: #E0E0E0; /* 텍스트 색상 */
+    margin: 10px; /* 카드 간 간격 유지 */
+}
+
+.card-content {
+    text-align: center; /* 텍스트 가운데 정렬 */
+}
+
+.button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #007bff; /* 버튼 배경색 */
+    color: #ffffff; /* 버튼 글자색 */
+    text-decoration: none; /* 링크 밑줄 제거 */
+    border-radius: 5px; /* 버튼 모서리 둥글게 */
+    transition: background-color 0.3s, transform 0.2s; /* 애니메이션 효과 */
+}
+
+.button:hover {
+    background-color: #0056b3; /* 버튼 호버 색상 */
+    transform: scale(1.05); /* 버튼 크기 확대 */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1E2A4A; /* 군청색으로 설정 */
+    color: #E0E0E0; /* 텍스트 색상 */
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .top-card-container, .bottom-card-container {
+        flex-direction: column; /* 세로로 정렬 */
+        align-items: center; /* 가운데 정렬 */
+    }
+
+    .card {
+        width: 90%; /* 화면 크기에 따라 카드 폭 조정 */
+        margin: 10px 0; /* 카드 간의 간격 조정 */
+    }
+}

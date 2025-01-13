@@ -28,7 +28,7 @@ nav a {
 .card {
     background-color: #1e1e1e; /* 카드 배경색 */
     border-radius: 15px; /* 모서리 둥글게 */
-    height: 250px; /* 카드의 고정 높이 */
+    height: 200px; /* 카드의 고정 높이 */
     display: flex; /* 카드 내용을 중앙 정렬하기 위해 */
     flex-direction: column; /* 내용 세로 정렬 */
     align-items: center; /* 수평 중앙 정렬 */

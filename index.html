@@ -1,36 +1,70 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>배틀그라운드 강의</title>
-    <link rel="stylesheet" href="styles.css"> <!-- 기본 스타일 시트 링크 -->
-</head>
-<body>
-    <header>
-        <h1>배틀그라운드 강의</h1>
-        <nav>
-            <a href="index.html">홈</a>
-        </nav>
-    </header>
-    <main>
-        <div class="card-container">
-            <div class="card">
-                <h3>게임 기초</h3>
-                <a href="game-basics.html" class="button">자세히 보기</a>
-            </div>
-            <div class="card">
-                <h3>전투 기술</h3>
-                <a href="combat-skills.html" class="button">자세히 보기</a>
-            </div>
-            <div class="card">
-                <h3>전술과 전략</h3>
-                <a href="tactics-strategy.html" class="button">자세히 보기</a>
-            </div>
-        </div>
-    </main>
-    <footer>
-        <p>&copy; 2025 배틀그라운드 강의</p>
-    </footer>
-</body>
-</html>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3개의 열 */
+    gap: 20px; /* 카드 사이 간격 */
+    padding: 20px;
+}
+
+.card {
+    background-image: url('images/card-background.png'); /* 카드 배경 이미지 */
+    background-size: cover; /* 배경 이미지 크기 조절 */
+    border: 1px solid #ddd; /* 카드 테두리 */
+    border-radius: 15px; /* 모서리 둥글게 */
+    padding: 20px;
+    text-align: center; /* 텍스트 가운데 정렬 */
+    transition: transform 0.2s, box-shadow 0.2s; /* 애니메이션 효과 */
+    position: relative; /* 아이콘 위치 조정을 위해 */
+    color: gold; /* 텍스트 색상 */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* 마우스 오버 시 카드 위로 이동 */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+}
+
+.card-icon {
+    max-width: 60px; /* 아이콘의 최대 폭 */
+    height: auto; /* 비율 유지 */
+    margin-bottom: 10px; /* 아이콘과 제목 간격 */
+    position: absolute; /* 카드 중앙에 아이콘 위치 조정 */
+    top: 20%; /* 카드 상단에서의 위치 */
+    left: 50%; /* 카드 중앙 */
+    transform: translate(-50%, -50%); /* 중앙 정렬 */
+}
+
+h3 {
+    margin-top: 70px; /* 아이콘 아래 제목과의 간격 조정 */
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr); /* 작은 화면에서는 2열 */
+    }
+}
+
+@media (max-width: 480px) {
+    .card-container {
+        grid-template-columns: 1fr; /* 더 작은 화면에서는 1열 */
+    }
+}

@@ -26,27 +26,23 @@ nav a {
 }
 
 .card {
-    position: relative; /* 아이콘 위치 조정을 위해 */
+    background-color: #1e1e1e; /* 기본 카드 배경 색 */
     border-radius: 15px; /* 모서리 둥글게 */
-    overflow: hidden; /* 이미지가 카드 밖으로 나가지 않도록 */
+    height: 200px; /* 카드의 고정 높이 */
+    display: flex; /* 카드 내용을 중앙 정렬하기 위해 */
+    align-items: center; /* 수직 중앙 정렬 */
+    justify-content: center; /* 수평 중앙 정렬 */
+    transition: transform 0.2s, box-shadow 0.2s; /* 애니메이션 효과 */
+    color: white; /* 텍스트 색상 */
 }
 
-.card-background {
-    width: 100%; /* 카드 배경 이미지의 폭을 100%로 설정 */
-    height: auto; /* 비율 유지 */
+.card:hover {
+    transform: translateY(-5px); /* 마우스 오버 시 카드 위로 이동 */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
 }
 
 .card-content {
-    position: absolute; /* 내용 위치 조정 */
-    top: 50%; /* 카드 중앙에 위치 */
-    left: 50%; /* 카드 중앙 */
-    transform: translate(-50%, -50%); /* 중앙 정렬 */
     text-align: center; /* 텍스트 가운데 정렬 */
-    color: gold; /* 텍스트 색상 */
-}
-
-h3 {
-    margin: 0; /* 제목의 기본 여백 제거 */
 }
 
 /* 버튼 스타일 */
@@ -67,7 +63,7 @@ h3 {
 /* 반응형 디자인 */
 @media (max-width: 768px) {
     .card-container {
-        grid-template-columns: repeat(2, 1fr); /* 작은 화면에서는2열 */
+        grid-template-columns: repeat(2, 1fr); /* 작은 화면에서는 2열 */
     }
 }
 

@@ -21,18 +21,16 @@ nav a {
 .card-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3개의 열 유지 */
-    gap: 40px; /* 카드 사이 간격 */
+    gap: 40px 60px; /* 카드 사이 간격: 위아래 40px, 좌우 60px */
     padding: 20px;
     max-width: 1200px; /* 최대 너비 설정 */
     margin: 0 auto; /* 중앙 정렬 */
-    padding-left: 60px; /* 좌측 여백 */
-    padding-right: 60px; /* 우측 여백 */
 }
 
 .card {
     background-color: #1e1e1e; /* 기본 카드 배경 색 */
     border-radius: 15px; /* 모서리 둥글게 */
-    height: 450px; /* 카드의 고정 높이 */
+    height: 480px; /* 카드의 고정 높이 */
     width: 320px; /* 카드의 고정 너비 */
     display: flex; /* 카드 내용을 중앙 정렬하기 위해 */
     flex-direction: column; /* 내용 세로 정렬 */
@@ -69,7 +67,7 @@ nav a {
 /* 반응형 디자인 */
 @media (max-width: 1200px) {
     .card-container {
-        gap: 30px; /* gap 축소 */
+        gap: 30px 60px; /* gap 축소: 위아래 30px, 좌우 60px */
     }
 }
 

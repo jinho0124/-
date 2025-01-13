@@ -1,0 +1,24 @@
+title: 배틀그라운드 강의
+description: 체계적인 배틀그라운드 학습 플랫폼
+baseurl: "/BG-Lecture"
+url: "https://[jinho0124].github.io"
+
+# 네비게이션 메뉴 설정
+nav:
+  - title: 홈
+    url: /
+  - title: 커리큘럼
+    url: /curriculum
+  - title: 리소스
+    url: /resources
+  - title: 커뮤니티
+    url: /community
+
+# 빌드 설정
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# 테마 설정
+theme: minima

@@ -18,24 +18,23 @@ nav a {
     text-decoration: none;
 }
 
-.top-card-container, .bottom-card-container {
-    display: flex; /* 수평 정렬을 위해 flexbox 사용 */
-    justify-content: space-around; /* 카드 간 동일한 간격 유지 */
+.card-container {
+    display: grid; /* 그리드 레이아웃으로 카드 배치 */
+    grid-template-columns: repeat(2, 1fr); /* 2열 구성 */
+    gap: 20px; /* 카드 간의 간격 */
     padding: 20px; /* 패딩 추가 */
 }
 
 .card {
     background-color: #1e1e1e; /* 카드 배경색 */
     border-radius: 15px; /* 모서리 둥글게 */
-    height: 200px; /* 카드의 고정 높이 */
-    width: 250px; /* 카드의 고정 너비 */
+    height: 250px; /* 카드의 고정 높이 */
     display: flex; /* 카드 내용을 중앙 정렬하기 위해 */
     flex-direction: column; /* 내용 세로 정렬 */
     align-items: center; /* 수평 중앙 정렬 */
     justify-content: center; /* 수직 중앙 정렬 */
     transition: transform 0.2s, box-shadow 0.2s; /* 애니메이션 효과 */
     color: #E0E0E0; /* 텍스트 색상 */
-    margin: 10px; /* 카드 간 간격 유지 */
 }
 
 .card-content {
@@ -67,13 +66,7 @@ footer {
 
 /* 반응형 디자인 */
 @media (max-width: 768px) {
-    .top-card-container, .bottom-card-container {
-        flex-direction: column; /* 세로로 정렬 */
-        align-items: center; /* 가운데 정렬 */
-    }
-
-    .card {
-        width: 90%; /* 화면 크기에 따라 카드 폭 조정 */
-        margin: 10px 0; /* 카드 간의 간격 조정 */
+    .card-container {
+        grid-template-columns: 1fr; /* 1열로 변경 */
     }
 }

@@ -1,0 +1,21 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* 배경색을 하얀색으로 변경 */
+}
+
+header {
+    background-color: #1E2A4A; /* 군청색으로 변경 */
+    color: #E0E0E0; /* 텍스트 색상 */
+    padding: 20px;
+    text-align: center;
+}
+
+nav a {
+    color: #E0E0E0;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+/* index.html에 필요한 추가 스타일 */

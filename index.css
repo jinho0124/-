@@ -2,55 +2,83 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f0f0f0;
 }
 
 header {
     background-color: #007bff;
     color: white;
+    padding: 20px;
     text-align: center;
-    padding: 1rem 0;
 }
 
-h1 {
-    margin: 0;
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
 }
 
-.cards {
+.card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    padding: 2rem;
+    grid-template-columns: repeat(3, 1fr); /* 3개의 열 유지 */
+    gap: 40px 60px; /* 카드 사이 간격: 위아래 40px, 좌우 60px */
+    padding: 20px;
+    max-width: 1200px; /* 최대 너비 설정 */
+    margin: 0 auto; /* 중앙 정렬 */
 }
 
 .card {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #1e1e1e; /* 기본 카드 배경 색 */
+    border-radius: 15px; /* 모서리 둥글게 */
+    height: 480px; /* 카드의 고정 높이 */
+    width: 320px; /* 카드의 고정 너비 */
+    display: flex; /* 카드 내용을 중앙 정렬하기 위해 */
+    flex-direction: column; /* 내용 세로 정렬 */
+    align-items: center; /* 수평 중앙 정렬 */
+    justify-content: center; /* 수직 중앙 정렬 */
+    transition: transform 0.2s, box-shadow 0.2s; /* 애니메이션 효과 */
+    color: white; /* 텍스트 색상 */
 }
 
-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 1rem;
+.card:hover {
+    transform: translateY(-5px); /* 마우스 오버 시 카드 위로 이동 */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
 }
 
-button:hover {
-    background-color: #0056b3;
+.card-content {
+    text-align: center; /* 텍스트 가운데 정렬 */
 }
 
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #f4f4f4;
-    color: #333;
-    font-size: 0.9rem;
-    border-top: 1px solid #ddd;
+/* 버튼 스타일 */
+.button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #007bff; /* 버튼 색 */
+    color: white; /* 버튼 글자색 */
+    text-decoration: none; /* 링크 밑줄 제거 */
+    border-radius: 5px; /* 버튼 모서리 둥글게 */
+}
+
+.button:hover {
+    background-color: #0056b3; /* 마우스 오버 시 버튼 색 변화 */
+}
+
+/* 반응형 디자인 */
+@media (max-width: 1200px) {
+    .card-container {
+        gap: 30px 60px; /* gap 축소: 위아래 30px, 좌우 60px */
+    }
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr); /* 2x3 그리드로 변경 */
+    }
+}
+
+@media (max-width: 480px) {
+    .card-container {
+        grid-template-columns: 1fr; /* 1열 세로 배치 */
+    }
 }

@@ -2,111 +2,35 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>배틀그라운드 강의</title>
-    <style>
-        body {
-            font-family: 'Nanum Gothic', sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            background: linear-gradient(45deg, #2B2B2B 70%, #FFB400 100%);
-            min-height: 100vh;
-            color: #FFFFFF;
-        }
-        header {
-            background: rgba(0, 0, 0, 0.8);
-            color: #FFFFFF;
-            padding: 20px 0;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        }
-        nav {
-            background: rgba(0, 0, 0, 0.9);
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            text-align: center;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: #FFFFFF;
-            text-decoration: none;
-            padding: 5px 10px;
-            border-radius: 3px;
-            transition: background-color 0.3s;
-        }
-        nav ul li a:hover {
-            background-color: rgba(255, 180, 0, 0.2);
-        }
-        .content {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.8);
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.3);
-        }
-        .chapter {
-            margin-bottom: 30px;
-            padding: 20px;
-            background: rgba(43, 43, 43, 0.5);
-            border-radius: 5px;
-            border-left: 4px solid #FFB400;
-        }
-        h2 {
-            color: #FFFFFF;
-            border-bottom: 2px solid #FFB400;
-            padding-bottom: 10px;
-            margin-top: 0;
-        }
-        h3 {
-            color: #FFFFFF;
-            margin-top: 20px;
-            padding-left: 10px;
-            border-left: 3px solid rgba(255, 180, 0, 0.5);
-        }
-        ul {
-            list-style-type: none;
-            padding-left: 20px;
-        }
-        li {
-            margin: 8px 0;
-            position: relative;
-            padding-left: 15px;
-        }
-        li:before {
-            content: "•";
-            color: #FFB400;
-            position: absolute;
-            left: 0;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css"> <!-- 기본 스타일 시트 링크 -->
 </head>
 <body>
     <header>
         <h1>배틀그라운드 강의</h1>
+        <nav>
+            <a href="index.html">홈</a>
+        </nav>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#chapter1">1. 게임 기초</a></li>
-            <li><a href="#chapter2">2. 생존 기술</a></li>
-            <li><a href="#chapter3">3. 전투 기술</a></li>
-            <li><a href="#chapter4">4. 실전 응용</a></li>
-            <li><a href="#chapter5">5. 심리와 멘탈</a></li>
-            <li><a href="#chapter6">6. 팀 플레이 전략</a></li>
-        </ul>
-    </nav>
-    <div class="content">
-        <!-- 여기에 각 챕터의 내용이 들어갈 예정입니다 -->
-    </div>
+    <main>
+        <div class="card-container">
+            <div class="card">
+                <h3>게임 기초</h3>
+                <a href="game-basics.html" class="button">자세히 보기</a>
+            </div>
+            <div class="card">
+                <h3>전투 기술</h3>
+                <a href="combat-skills.html" class="button">자세히 보기</a>
+            </div>
+            <div class="card">
+                <h3>전술과 전략</h3>
+                <a href="tactics-strategy.html" class="button">자세히 보기</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 배틀그라운드 강의</p>
+    </footer>
 </body>
 </html>

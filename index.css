@@ -1,79 +1,105 @@
 body {
-    font-family: Arial, sans-serif;  /* 기본 폰트 설정 */
-    margin: 0;  /* 바깥 여백 제거 */
-    padding: 0;  /* 안쪽 여백 제거 */
-    background-color: #f0f0f0;  /* 배경색 설정 */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
 }
 
 header {
-    background: linear-gradient(90deg, #1e1e1e, #3a3a3a);  /* 검정과 회색의 그라데이션 배경 */
-    color: #ffcc00;  /* 헤더 텍스트 색상 (노란색) */
-    padding: 20px;  /* 안쪽 여백 */
-    text-align: center;  /* 텍스트 중앙 정렬 */
+    background: linear-gradient(90deg, #1e1e1e, #3a3a3a);
+    color: #ffcc00;
+    padding: 20px;
+    text-align: center;
 }
 
 nav a {
-    color: white;  /* 링크 텍스트 색상 */
-    margin: 0 15px;  /* 좌우 여백 */
-    text-decoration: none;  /* 밑줄 제거 */
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
 }
 
 .card-container {
-    display: grid;  /* 그리드 레이아웃 사용 */
-    grid-template-columns: repeat(3, 1fr);  /* 3열 그리드 설정 */
-    gap: 40px 60px;  /* 그리드 간격 (세로 40px, 가로 60px) */
-    padding: 20px;  /* 안쪽 여백 */
-    max-width: 1200px;  /* 최대 너비 설정 */
-    margin: 0 auto;  /* 가운데 정렬 */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 60px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .card {
-    background-color: #1e1e1e;  /* 카드 배경색 */
-    border-radius: 15px;  /* 모서리 둥글게 */
-    height: 480px;  /* 카드 높이 */
-    width: 320px;  /* 카드 너비 */
-    display: flex;  /* 플렉스 박스 사용 */
-    flex-direction: column;  /* 세로 방향 정렬 */
-    align-items: center;  /* 가로축 중앙 정렬 */
-    justify-content: space-between;  /* 세로축 균등 배치 */
-    padding: 30px 20px;  /* 안쪽 여백 */
-    box-sizing: border-box;  /* 박스 사이징 설정 */
-    transition: transform 0.2s, box-shadow 0.2s;  /* 애니메이션 효과 설정 */
-    color: white;  /* 텍스트 색상 */
-    cursor: pointer;  /* 클릭 가능성 표시 */
+    background-color: #1e1e1e;
+    border-radius: 15px;
+    height: 480px;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    transition: transform 0.2s, box-shadow 0.2s;
+    color: white;
+    cursor: pointer;
 }
 
 .card:hover {
-    transform: translateY(-5px);  /* 마우스 오버 시 카드 위로 5px 이동 */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);  /* 그림자 효과 */
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .card-content {
-    display: flex;  /* 플렉스 박스 사용 */
-    flex-direction: column;  /* 세로 방향 정렬 */
-    align-items: center;  /* 가로축 중앙 정렬 */
-    justify-content: space-between;  /* 세로축 균등 배치 */
-    height: 100%;  /* 높이 100% */
-    width: 100%;  /* 너비 100% */
-    text-align: center;  /* 텍스트 중앙 정렬 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    text-align: center;
 }
 
 .card-icon {
-    margin: 20px 0;  /* 위아래 여백 */
-    display: flex;  /* 플렉스 박스 사용 */
-    justify-content: center;  /* 가로축 중앙 정렬 */
-    align-items: center;  /* 세로축 중앙 정렬 */
+    margin: 20px 0;  /* 기본 여백 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.card-icon img {
-    width: 140px;  /* 아이콘 너비 */
-    height: 140px;  /* 아이콘 높이 */
+/* 아이콘 크기 조절을 위한 클래스 */
+.icon-size-1 .card-icon img {
+    width: 60px;  /* 아이콘 크기 조정 */
+    height: 60px;  /* 아이콘 크기 조정 */
+}
+
+.icon-size-2 .card-icon img {
+    width: 80px;  /* 아이콘 크기 조정 */
+    height: 80px;  /* 아이콘 크기 조정 */
+}
+
+.icon-size-3 .card-icon img {
+    width: 100px;  /* 아이콘 크기 조정 */
+    height: 100px;  /* 아이콘 크기 조정 */
+}
+
+.icon-size-4 .card-icon img {
+    width: 120px;  /* 아이콘 크기 조정 */
+    height: 120px;  /* 아이콘 크기 조정 */
+}
+
+.icon-size-5 .card-icon img {
+    width: 140px;  /* 아이콘 크기 조정 */
+    height: 140px;  /* 아이콘 크기 조정 */
+}
+
+.icon-size-6 .card-icon img {
+    width: 160px;  /* 아이콘 크기 조정 */
+    height: 160px;  /* 아이콘 크기 조정 */
 }
 
 .card-content h3 {
-    margin: 0;  /* 여백 제거 */
-    padding: 10px 0;  /* 위아래 여백 */
-    font-size: 1.5em;  /* 글자 크기 */
+    margin: 0;
+    padding: 10px 0;
+    font-size: 1.5em;
 }
 
 .card-content p {

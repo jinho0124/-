@@ -52,7 +52,7 @@ nav a {
     display: flex;  /* 플렉스 박스 사용 */
     flex-direction: column;  /* 세로 방향 정렬 */
     align-items: center;  /* 가로축 중앙 정렬 */
-    justify-content: space-between;  /* 세로축 균등 배치 */
+    justify-content: center;  /* 세로축 중앙 정렬 */
     height: 100%;  /* 높이 100% */
     width: 100%;  /* 너비 100% */
     text-align: center;  /* 텍스트 중앙 정렬 */
@@ -62,56 +62,13 @@ nav a {
     display: flex;  /* 플렉스 박스 사용 */
     justify-content: center;  /* 가로축 중앙 정렬 */
     align-items: center;  /* 세로축 중앙 정렬 */
-    position: relative;  /* 위치 조정을 위해 상대적 위치 설정 */
+    margin-bottom: 20px;  /* 카드 내용과의 여백 */
 }
 
-/* 아이콘 크기와 위치 조절을 위한 클래스 */
-.icon-1 img {
-    width: 160px;  /* 아이콘 크기 조정 (아이콘 1) */
-    height: 160px;  /* 아이콘 크기 조정 (아이콘 1) */
-    position: absolute;  /* 위치를 절대적으로 설정 */
-    top: 20px;  /* 아이콘 상단 위치 조정 */
-    left: 0;    /* 아이콘 좌측 위치 조정 */
-}
-
-.icon-2 img {
-    width: 80px;  /* 아이콘 크기 조정 (아이콘 2) */
-    height: 80px;  /* 아이콘 크기 조정 (아이콘 2) */
-    position: absolute;  /* 위치를 절대적으로 설정 */
-    top: 30px;  /* 아이콘 상단 위치 조정 */
-    left: 0;    /* 아이콘 좌측 위치 조정 */
-}
-
-.icon-3 img {
-    width: 100px;  /* 아이콘 크기 조정 (아이콘 3) */
-    height: 100px;  /* 아이콘 크기 조정 (아이콘 3) */
-    position: absolute;  /* 위치를 절대적으로 설정 */
-    top: 5px;   /* 아이콘 상단 위치 조정 */
-    left: 0;    /* 아이콘 좌측 위치 조정 */
-}
-
-.icon-4 img {
-    width: 120px;  /* 아이콘 크기 조정 (아이콘 4) */
-    height: 120px;  /* 아이콘 크기 조정 (아이콘 4) */
-    position: absolute;  /* 위치를 절대적으로 설정 */
-    top: 20px;  /* 아이콘 상단 위치 조정 */
-    left: 0;    /* 아이콘 좌측 위치 조정 */
-}
-
-.icon-5 img {
-    width: 140px;  /* 아이콘 크기 조정 (아이콘 5) */
-    height: 140px;  /* 아이콘 크기 조정 (아이콘 5) */
-    position: absolute;  /* 위치를 절대적으로 설정 */
-    top: 15px;  /* 아이콘 상단 위치 조정 */
-    left: 0;    /* 아이콘 좌측 위치 조정 */
-}
-
-.icon-6 img {
-    width: 160px;  /* 아이콘 크기 조정 (아이콘 6) */
-    height: 160px;  /* 아이콘 크기 조정 (아이콘 6) */
-    position: absolute;  /* 위치를 절대적으로 설정 */
-    top: 25px;  /* 아이콘 상단 위치 조정 */
-    left: 0;    /* 아이콘 좌측 위치 조정 */
+/* 아이콘 크기 조절을 위한 클래스 (일관된 크기 설정) */
+.card-icon img {
+    width: 80px;  /* 아이콘 크기 조정 */
+    height: 80px;  /* 아이콘 크기 조정 */
 }
 
 .card-content h3 {

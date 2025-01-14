@@ -1,84 +1,122 @@
+/* index.css */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;  /* 기본 폰트 설정 */
+    margin: 0;  /* 바깥 여백 제거 */
+    padding: 0;  /* 안쪽 여백 제거 */
+    background-color: #f0f0f0;  /* 배경색 설정 */
 }
 
+/* 헤더 스타일링 */
 header {
-    background: linear-gradient(90deg, #1e1e1e, #3a3a3a); /* 검정과 짙은 회색 그라데이션 */
-    color: #ffcc00; /* 노란색 텍스트 */
-    padding: 20px;
-    text-align: center;
+    background: linear-gradient(90deg, #1e1e1e, #3a3a3a);  /* 검정과 회색의 그라데이션 배경 */
+    color: #ffcc00;  /* 헤더 텍스트 색상 (노란색) */
+    padding: 20px;  /* 안쪽 여백 */
+    text-align: center;  /* 텍스트 중앙 정렬 */
 }
 
+/* 네비게이션 링크 스타일링 */
 nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
+    color: white;  /* 링크 텍스트 색상 */
+    margin: 0 15px;  /* 좌우 여백 */
+    text-decoration: none;  /* 밑줄 제거 */
 }
 
+/* 카드 컨테이너 그리드 레이아웃 */
 .card-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3개의 열 유지 */
-    gap: 40px 60px; /* 카드 사이 간격: 위아래 40px, 좌우 60px */
-    padding: 20px;
-    max-width: 1200px; /* 최대 너비 설정 */
-    margin: 0 auto; /* 중앙 정렬 */
+    display: grid;  /* 그리드 레이아웃 사용 */
+    grid-template-columns: repeat(3, 1fr);  /* 3열 그리드 */
+    gap: 40px 60px;  /* 그리드 간격 (세로 40px, 가로 60px) */
+    padding: 20px;  /* 안쪽 여백 */
+    max-width: 1200px;  /* 최대 너비 */
+    margin: 0 auto;  /* 가운데 정렬 */
 }
 
+/* 카드 스타일링 */
 .card {
-    background-color: #1e1e1e; /* 기본 카드 배경 색 */
-    border-radius: 15px; /* 모서리 둥글게 */
-    height: 480px; /* 카드의 고정 높이 */
-    width: 320px; /* 카드의 고정 너비 */
-    display: flex; /* 카드 내용을 중앙 정렬하기 위해 */
-    flex-direction: column; /* 내용 세로 정렬 */
-    align-items: center; /* 수평 중앙 정렬 */
-    justify-content: center; /* 수직 중앙 정렬 */
-    transition: transform 0.2s, box-shadow 0.2s; /* 애니메이션 효과 */
-    color: white; /* 텍스트 색상 */
+    background-color: #1e1e1e;  /* 카드 배경색 */
+    border-radius: 15px;  /* 모서리 둥글게 */
+    height: 480px;  /* 카드 높이 */
+    width: 320px;  /* 카드 너비 */
+    display: flex;  /* 플렉스 박스 사용 */
+    flex-direction: column;  /* 세로 방향 정렬 */
+    align-items: center;  /* 가로축 중앙 정렬 */
+    justify-content: space-between;  /* 세로축 균등 배치 */
+    padding: 30px 20px;  /* 안쪽 여백 */
+    box-sizing: border-box;  /* 박스 사이징 설정 */
+    transition: transform 0.2s, box-shadow 0.2s;  /* 애니메이션 효과 */
+    color: white;  /* 텍스트 색상 */
 }
 
+/* 카드 호버 효과 */
 .card:hover {
-    transform: translateY(-5px); /* 마우스 오버 시 카드 위로 이동 */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+    transform: translateY(-5px);  /* 위로 5px 이동 */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);  /* 그림자 효과 */
 }
 
+/* 카드 내용 스타일링 */
 .card-content {
-    text-align: center; /* 텍스트 가운데 정렬 */
+    display: flex;  /* 플렉스 박스 사용 */
+    flex-direction: column;  /* 세로 방향 정렬 */
+    align-items: center;  /* 가로축 중앙 정렬 */
+    justify-content: space-between;  /* 세로축 균등 배치 */
+    height: 100%;  /* 높이 100% */
+    width: 100%;  /* 너비 100% */
+    text-align: center;  /* 텍스트 중앙 정렬 */
 }
 
-/* 버튼 스타일 */
+/* 카드 아이콘 컨테이너 */
+.card-icon {
+    margin: 20px 0;  /* 위아래 여백 */
+    display: flex;  /* 플렉스 박스 사용 */
+    justify-content: center;  /* 가로축 중앙 정렬 */
+    align-items: center;  /* 세로축 중앙 정렬 */
+}
+
+/* 카드 아이콘 이미지 */
+.card-icon img {
+    width: 120px;  /* 이미지 너비 */
+    height: auto;  /* 높이 자동 조정 */
+    margin: 15px 0;  /* 위아래 여백 */
+}
+
+/* 카드 제목 스타일링 */
+.card-content h3 {
+    margin: 0;  /* 여백 제거 */
+    padding: 10px 0;  /* 위아래 여백 */
+    font-size: 1.5em;  /* 글자 크기 */
+}
+
+/* 버튼 스타일링 */
 .button {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px;
-    background-color: #007bff; /* 버튼 색 */
-    color: white; /* 버튼 글자색 */
-    text-decoration: none; /* 링크 밑줄 제거 */
-    border-radius: 5px; /* 버튼 모서리 둥글게 */
+    display: inline-block;  /* 인라인 블록 요소 */
+    margin-top: auto;  /* 상단 여백 자동 */
+    padding: 10px 15px;  /* 안쪽 여백 */
+    background-color: #007bff;  /* 배경색 */
+    color: white;  /* 텍스트 색상 */
+    text-decoration: none;  /* 밑줄 제거 */
+    border-radius: 5px;  /* 모서리 둥글게 */
 }
 
+/* 버튼 호버 효과 */
 .button:hover {
-    background-color: #0056b3; /* 마우스 오버 시 버튼 색 변화 */
+    background-color: #0056b3;  /* 호버 시 배경색 변경 */
 }
 
 /* 반응형 디자인 */
 @media (max-width: 1200px) {
     .card-container {
-        gap: 30px 60px; /* gap 축소: 위아래 30px, 좌우 60px */
+        gap: 30px 60px;  /* 그리드 간격 조정 */
     }
 }
 
 @media (max-width: 768px) {
     .card-container {
-        grid-template-columns: repeat(2, 1fr); /* 2x3 그리드로 변경 */
+        grid-template-columns: repeat(2, 1fr);  /* 2열 그리드로 변경 */
     }
 }
 
 @media (max-width: 480px) {
     .card-container {
-        grid-template-columns: 1fr; /* 1열 세로 배치 */
+        grid-template-columns: 1fr;  /* 1열 그리드로 변경 */
     }
 }

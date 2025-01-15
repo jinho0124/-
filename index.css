@@ -19,13 +19,13 @@ header {
 }
 
 .logo {
-    height: 60px;  /* 로고 크기 설정 */
-    max-height: 60px; /* 로고 최대 높이 설정 */
+    height: 50px;  /* 로고 크기 설정 (적절한 크기로 조정) */
+    max-height: 50px; /* 로고 최대 높이 설정 */
 }
 
 h1 {
     color: white;  /* 사이트 제목 색상 */
-    font-size: 1.8em;  /* 제목 글자 크기 */
+    font-size: 1.5em;  /* 제목 글자 크기 조정 */
     text-align: center;  /* 중앙 정렬 */
     flex-grow: 1;  /* 제목이 공간을 차지하도록 설정 */
 }
@@ -53,7 +53,7 @@ h1 {
     border-radius: 5px;  /* 둥근 모서리 설정 */
 }
 
-/* 나머지 카드 및 본문 스타일은 이전과 동일 */
+/* 카드 스타일은 그대로 유지 */
 .card-container {
     display: grid;  /* 그리드 레이아웃 사용 */
     grid-template-columns: repeat(3, 1fr);  /* 3열 그리드 설정 */
@@ -96,4 +96,3 @@ h1 {
 
 .card-icon {
     display: flex;  /* 플렉스 박스 사용 */
-    justify-content: center;  /* 가로축 중앙 정렬

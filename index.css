@@ -33,7 +33,7 @@ header {
     margin: 0;  /* 여백 제거 */
 }
 
-nav {
+.nav-container {
     display: flex;  /* 플렉스 박스 사용 */
     justify-content: center;  /* 중앙 정렬 */
     margin-top: 10px;  /* 네비게이션과 헤더 간격 */

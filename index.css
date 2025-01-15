@@ -2,12 +2,12 @@ body {
     font-family: Arial, sans-serif;  /* 기본 폰트 설정 */
     margin: 0;  /* 바깥 여백 제거 */
     padding: 0;  /* 안쪽 여백 제거 */
-    background-color: #f0f0f0;  /* 배경색 설정 */
+    background-color: #000000;  /* 배경색 설정 */
 }
 
 header {
     background: linear-gradient(90deg, #1e1e1e, #3a3a3a);  /* 검정과 회색의 그라데이션 배경 */
-    color: #ffcc00;  /* 헤더 텍스트 색상 (노란색) */
+    color: #ffffff;  /* 헤더 텍스트 색상 (흰색) */
     padding: 20px;  /* 안쪽 여백 */
     text-align: center;  /* 텍스트 중앙 정렬 */
 }

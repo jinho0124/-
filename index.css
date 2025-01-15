@@ -23,6 +23,19 @@ header {
     height: 30px;  /* 로고 높이 */
     margin-right: 10px;  /* 텍스트와의 간격 */
 }
+.title {
+    position: absolute;  /* 절대 위치로 설정 */
+    left: 50%;  /* 중앙 위치 */
+    transform: translateX(-50%);  /* 중앙으로 이동 */
+    margin: 0;  /* 여백 제거 */
+}
+
+.nav-container {
+    display: flex;  /* 플렉스 박스 사용 */
+    justify-content: center;  /* 중앙 정렬 */
+    margin-top: 10px;  /* 네비게이션과 헤더 간격 */
+}
+
 
 nav a {
     color: white;  /* 링크 텍스트 색상 */

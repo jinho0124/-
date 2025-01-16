@@ -26,7 +26,7 @@ header {
 .logo {
     position: absolute; /* 절대 위치 설정 */
     left: 20px; /* 왼쪽에서 20px 떨어진 위치 */
-    top: 50%; /* 상단에서 50% 위치 */
+    align-items: center;; /* 상단에서 50% 위치 */
     transform: translateY(-50%); /* 세로 중앙 정렬을 위해 위로 50% 이동 */
     width: 60px; /* 로고 너비 */
     height: 60px; /* 로고 높이 */
